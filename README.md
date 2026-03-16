@@ -99,10 +99,10 @@ CGPA: **3.11**
 
 ## 📬 Contact
 
-📧 Email: *(Add your email)*
-💼 LinkedIn: *(Add LinkedIn link)*
+📧 Email: *(aburayahanmondal214@gmail.com)*
+💼 LinkedIn: *([](https://www.linkedin.com/in/aburayhan))*
 🐙 GitHub: https://github.com/aburayhan
-🌐 Portfolio: *(Add your website link)*
+🌐 Portfolio: *(link)*
 
 ---
 

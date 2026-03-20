@@ -310,6 +310,7 @@ body {
     position: relative;
     padding-left: 60px;
     margin-bottom: 20px;
+   
 }
 
 
@@ -330,7 +331,7 @@ body {
 /* card */
 
 .experience-card {
-    background: #151515;
+    background: #1e1e1e;
     padding: 26px;
     border-radius: 14px;
     border: 1px solid #262626;
@@ -429,7 +430,7 @@ body {
     align-items: center;
     gap: 16px;
     padding: 16px 20px;
-    background: #151515;
+    background: #1e1e1e;
     border-radius: 12px;
     border-left: 4px solid #22d3ee;
     transition: all 0.3s ease;

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abu Rayhan | Full-Stack Developer & Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#121212] text-gray-100">
+
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 bg-[#0b0b0b]/80 backdrop-blur-lg border-b border-gray-800 transition-all">
+
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="text-2xl font-bold tracking-wide">
+                <img src="assets/logo1.png" alt="Logo" class="h-14 w-auto">
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest">
+
+                <a href="#home" class="nav-link">Home</a>
+
+                <a href="#about" class="nav-link">About</a>
+
+                <a href="#experience" class="nav-link">Experience</a>
+
+                <a href="#projects" class="nav-link">Projects</a>
+
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </div>
+
+            <!-- Hire Button -->
+            <a href="#contact"
+                class="hidden md:block bg-red-600 px-5 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition">
+                Hire Me
+            </a>
+
+            <!-- Mobile Button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden flex flex-col items-center bg-[#0b0b0b] border-t border-gray-800 py-6 space-y-6 text-sm uppercase">
+
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </div>
+
+    </nav>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center px-6 pt-20 relative overflow-hidden">
+
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/75 z-0"></div>
+
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+
+            <!-- LEFT SIDE -->
+            <div class="space-y-6">
+
+                <p class="text-gray-300 text-lg">As-salamu alaikum 👋</p>
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                    I am <span class="text-cyan-400">Abu Rayhan</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-300">
+                    <span id="typing" class="text-cyan-400 font-semibold border-r-2 border-cyan-400 pr-2"></span>
+                </p>
+
+                <!-- BUTTONS -->
+                <div class="flex flex-wrap gap-4 pt-2">
+
+                    <a href="assets/resume.pdf" download="Abu_Rayhan_Resume.pdf"
+                        class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-xl hover:scale-105">
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE IMAGE -->
+            <div class="flex justify-center relative">
+
+                <div class="absolute w-80 h-80 md:w-96 md:h-96 rounded-full border border-cyan-500/30 animate-pulse">
+                </div>
+
+                <div
+                    class="floating-image w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-gray-700 overflow-hidden ring-8 ring-gray-800/40 shadow-2xl">
+
+                    <img src="assets/profile.png" alt="Abu Rayhan" class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SCROLL INDICATOR -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+
+            <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+
+                <div class="w-1 h-2 bg-gray-400 rounded-full mt-2"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about" class="py-24 bg-[#000000] px-6">
+        <div class="container mx-auto max-w-6xl A ">
+
+            <!-- heading -->
+            <div class="text-center mb-16">
+
+                <!-- <span class="text-cyan-400 italic text-lg">About</span> -->
+
+                <h2 class="text-4xl font-bold uppercase">
+                    Personal <span class="text-cyan-500">Details</span>
+                </h2>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+
+                <!-- LEFT SIDE -->
+                <div>
+
+                    <h3 class="text-2xl font-bold mb-4 italic">
+                        I'm <span class="text-cyan-400">Abu Rayhan</span>
+                    </h3>
+
+                    <p class="text-gray-400 leading-relaxed text-lg mb-6 text-justify">
+
+                        I am a graduate in <strong>Information and Communication Engineering</strong>
+                        from Noakhali Science and Technology University.
+
+                        I have a strong background in programming and problem solving,
+                        having solved over 80 problems on platforms like
+                        <strong>URI Online Judge</strong> and <strong>LeetCode</strong>.
+
+                        Previously, I worked with <strong>PHP</strong> and <strong>Laravel</strong>
+                        to build scalable web applications.
+
+                        Currently, I am focusing on <strong>Software Quality Assurance (QA)</strong>,
+                        where I work with API testing, test case design, and automation
+                        to ensure software quality and reliability.
+
+                    </p>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+                <div class="space-y-6">
+
+                    <!-- TABS -->
+                    <div
+                        class="flex flex-wrap gap-3 border-b border-gray-800 pb-4 text-sm font-semibold uppercase tracking-wider">
+
+                        <button onclick="openTab(event,'Skills')" class="tab-links active-tab">Skills</button>
+
+                        <button onclick="openTab(event,'Education')" class="tab-links">Education</button>
+
+                        <button onclick="openTab(event,'Language')" class="tab-links">Language</button>
+
+                        <button onclick="openTab(event,'Programming')" class="tab-links">Programming</button>
+
+                        <button onclick="openTab(event,'Testing')" class="tab-links">Testing</button>
+
+                    </div>
+
+
+                    <!-- SKILLS -->
+                    <div id="Skills" class="tab-content block space-y-4">
+
+                        <div class="about-card">
+
+                            <h4 class="about-title">Software Testing</h4>
+
+                            <p class="about-text">
+                                Manual Testing, Test Case Design, API Testing, Bug Reporting, Regression Testing
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-card">
+
+                            <h4 class="about-title">Automation & API Tools</h4>
+
+                            <p class="about-text">
+                                Postman, Newman, Python, REST API, JSON
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-card">
+
+                            <h4 class="about-title">Development & Tools</h4>
+
+                            <p class="about-text">
+                                PHP, Laravel, Git, GitHub, VS Code, MySQL, Bootstrap
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EDUCATION -->
+                    <div id="Education" class="tab-content hidden space-y-4">
+
+                        <div class="about-card">
+
+                            <h4 class="text-cyan-400 font-bold">
+                                B.Sc. in Information and Communication Engineering
+                            </h4>
+
+                            <p class="text-gray-400 text-sm italic">
+                                Noakhali Science and Technology University | CGPA 3.11
+                            </p>
+
+                            <p class="text-gray-500 text-xs">
+                                Jan 2020 – Aug 2025
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-card">
+
+                            <h4 class="text-cyan-400 font-bold">
+                                Higher Secondary Certificate (HSC)
+                            </h4>
+
+                            <p class="text-gray-400 text-sm italic">
+                                Bogura Government College | GPA 5.00
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-card">
+
+                            <h4 class="text-cyan-400 font-bold">
+                                Secondary School Certificate (SSC)
+                            </h4>
+
+                            <p class="text-gray-400 text-sm italic">
+                                Kocha Sahar B.L High School | GPA 5.00
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LANGUAGE -->
+                    <div id="Language" class="tab-content hidden">
+
+                        <div class="about-card">
+
+                            <p class="text-gray-300">Bengali – Native</p>
+
+                            <p class="text-gray-300">English – Professional Working Proficiency</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRAMMING -->
+                    <div id="Programming" class="tab-content hidden">
+
+                        <div class="grid grid-cols-2 gap-3">
+
+                            <span class="skill-pill">C / C++</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">C#</span>
+                            <span class="skill-pill">PHP</span>
+                            <span class="skill-pill">SQL</span>
+
+                        </div>
+
+                        <p class="text-xs text-gray-500 italic mt-2">
+                            Strong foundation in programming and problem solving. Solved 50+ problems on URI Online
+                            Judge and 30+ problems on LeetCode.
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- TESTING -->
+                    <div id="Testing" class="tab-content hidden">
+
+                        <div class="grid grid-cols-2 gap-3">
+
+                            <span class="skill-pill">Manual Testing</span>
+                            <span class="skill-pill">API Testing</span>
+                            <span class="skill-pill">Test Case Writing</span>
+                            <span class="skill-pill">Bug Reporting</span>
+                            <span class="skill-pill">Regression Testing</span>
+
+                        </div>
+
+                        <p class="text-xs text-gray-500 italic mt-2">
+                            Focused on ensuring software quality through structured testing,
+                            API validation, and detailed bug reporting.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 bg-[#000000]">
+
+        <div class="container mx-auto max-w-5xl A ">
+
+            <div class="text-center mb-20">
+
+                <h2 class="text-4xl font-bold uppercase">
+                    Work <span class="text-cyan-500">Journey</span>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline relative">
+
+                <!-- EXPERIENCE 1 -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="flex items-center gap-3 mb-3">
+
+                            <div class="company-logo">
+                                <img src="assets/ba-logo.png" alt="">
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">
+                                    Web Development & QA Intern
+                                </h3>
+
+                                <p class="text-cyan-400 text-sm">
+                                    Business Automation | Jun 2024 – Sep 2024
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <ul class="exp-list">
+
+                            <li>Engineered scalable full-stack web solutions using PHP and Laravel on the backend, and
+                                HTML,
+                                CSS, JavaScript on the frontend.</li>
+                            <li>Architected and optimized MySQL databases with end-to-end CRUD operations for enhanced
+                                efficiency and reliability.</li>
+                            <li>Implemented Git-based version control workflows for team collaboration.</li>
+                            <li>Performed API testing and verification using Postman, ensuring software quality.</li>
+                            <li>Collaborated cross-functionally, following SRS guidelines and industry-standard SDLC
+                                methodologies.</li>
+
+
+                        </ul>
+
+
+                        <!-- TECH TAGS -->
+                        <div class="exp-tags">
+
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Postman</span>
+                            <span>Git</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE 2 -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="flex items-center gap-3 mb-3">
+
+                            <div class="company-logo">
+                                <img src="assets/btcl-logo.png" alt="">
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">
+                                    Network Engineering Intern
+                                </h3>
+
+                                <p class="text-cyan-400 text-sm">
+                                    BTCL | Nov 2024
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <ul class="exp-list">
+
+                            <li>Assisted in configuring, maintaining, and monitoring LAN/WAN networks, including IP
+                                routing
+                                and network devices.</li>
+                            <li>Worked with PSTN, VoIP, and digital telephone exchange systems to gain practical telecom
+                                experience.</li>
+                            <li>Conducted optical fiber splicing and performed OTDR testing to identify and resolve
+                                network
+                                faults.</li>
+                            <li>Acquired exposure to large-scale telecommunications infrastructure and enterprise-level
+                                operations.</li>
+
+
+                        </ul>
+
+
+                        <div class="exp-tags">
+
+                            <span>Networking</span>
+                            <span>VoIP</span>
+                            <span>Fiber</span>
+                            <span>OTDR</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-6 px-6 bg-[#000000]">
+        <div class="container mx-auto max-w-5xl A ">
+
+            <!-- Section Header -->
+            <div class="text-center mb-8">
+                <span class="text-cyan-500 italic">Leadership</span>
+                <h2 class="text-4xl font-bold uppercase">
+                    Activities <span class="text-cyan-600">History</span>
+                </h2>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline relative">
+
+                <!-- Leadership Item -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot bg-green-500"></div>
+
+                    <div class="experience-card">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="company-logo">
+                                <img src="assets/bondhushava-logo.jpg" alt="Bondhushava Logo">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">
+                                    Prothom Alo Bondhushava, NSTU
+                                </h3>
+                                <p class="text-cyan-500 text-sm">
+                                    Jan 2022 – Dec 2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="exp-list">
+                            <li><strong>Treasurer (Jan 2022 – Dec 2022):</strong> Handled budgeting, expense tracking,
+                                and financial reporting; ensured transparent fund utilization.</li>
+                            <li><strong>General Secretary (Jan 2023 – Dec 2023):</strong> Managed communications,
+                                documentation, and event planning support; improved team coordination.</li>
+                            <li><strong>President (Jan 2024 – Dec 2025):</strong> Led the organization, organized
+                                events, coordinated volunteers, and initiated new reading programs and awareness
+                                campaigns.</li>
+                        </ul>
+
+                        <div class="exp-tags">
+                            <span>Leadership</span>
+                            <span>Event Management</span>
+                            <span>Team Coordination</span>
+                            <span>Fund Management</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-[#000000]">
+        <div class="container mx-auto max-w-5xl  A ">
+
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold uppercase text-white">
+                    Get <span class="text-cyan-600">In Touch</span>
+                </h2>
+                <p class="text-gray-400 mt-2">Reach out for collaborations, projects, or just say hi 👋</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                <!-- Contact Info Cards -->
+                <div class="space-y-6">
+
+                    <div class="contact-card">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="label">Location</p>
+                            <p class="value">Gobindaganj, Gaibandha</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="label">Email</p>
+                            <p class="value">aburayahanmondal214@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <p class="label">Phone</p>
+                            <p class="value">+88 01786955214</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://www.linkedin.com/in/aburayhan" target="_blank" class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/aburayhan" target="_blank" class="social-btn github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.facebook.com/abu.rayhan.214/" target="_blank" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <h3 class="text-white font-bold text-2xl mb-4">Send a Message</h3>
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+
+                    <p class="form-status mt-3 text-sm hidden"></p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

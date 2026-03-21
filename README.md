@@ -3,7 +3,7 @@
 Welcome to my professional portfolio repository.
 This portfolio showcases my background, technical skills, and experience in **Software Quality Assurance (QA), API Testing, and Web Development**.
 
----
+-----------------------
 
 ## 🌐 Live Portfolio
 
@@ -11,7 +11,7 @@ You can view my portfolio here:
 
 🔗 **Portfolio Website:** *(Add your deployed link here if you host it on GitHub Pages or Netlify)*
 
----
+------------------------
 
 ## 👨‍💼 About Me
 

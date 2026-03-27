@@ -1,11 +1,11 @@
-# 👨‍💻 Abu Rayhan – QA Engineer Portfolio
+#  Abu Rayhan – QA Engineer Portfolio
 
 Welcome to my professional portfolio repository.
 This portfolio showcases my background, technical skills, and experience in **Software Quality Assurance (QA), API Testing, and Web Development**.
 
 -----------------------
 
-## 🌐 Live Portfolio
+##  Live Portfolio
 
 You can view my portfolio here:
 
@@ -13,7 +13,7 @@ You can view my portfolio here:
 
 ------------------------
 
-## 👨‍💼 About Me
+##  About Me
 
 I am a graduate in **Information and Communication Engineering** from **Noakhali Science and Technology University**.
 
@@ -25,7 +25,7 @@ Currently, I am focusing on **Software Quality Assurance (QA)** and learning **a
 
 ---
 
-## 🛠 Skills
+##  Skills
 
 ### Software Testing
 
@@ -54,12 +54,12 @@ Currently, I am focusing on **Software Quality Assurance (QA)** and learning **a
 
 ---
 
-## 💼 Experience
+##  Experience
 
 ### Web Development & QA Intern
 
 **Business Automation**
-📅 Jun 2024 – Sep 2024
+Jun 2024 – Sep 2024
 
 * Developed scalable web applications using **PHP & Laravel**
 * Designed and optimized **MySQL databases**
@@ -72,7 +72,7 @@ Currently, I am focusing on **Software Quality Assurance (QA)** and learning **a
 ### Network Engineering Intern
 
 **Bangladesh Telecommunications Company Limited (BTCL)**
-📅 Nov 2024
+ Nov 2024
 
 * Configured and monitored **LAN/WAN networks**
 * Worked with **PSTN and VoIP communication systems**
@@ -81,7 +81,7 @@ Currently, I am focusing on **Software Quality Assurance (QA)** and learning **a
 
 ---
 
-## 📚 Education
+##  Education
 
 **B.Sc. in Information and Communication Engineering**
 Noakhali Science and Technology University
@@ -89,7 +89,7 @@ CGPA: **3.11**
 
 ---
 
-## 🧠 Competitive Programming
+##  Competitive Programming
 
 * Solved **50+ problems on URI Online Judge**
 * Solved **30+ problems on LeetCode**
@@ -97,13 +97,13 @@ CGPA: **3.11**
 
 ---
 
-## 📬 Contact
+##  Contact
 
-📧 Email: *(aburayahanmondal214@gmail.com)*
-💼 LinkedIn: *([](https://www.linkedin.com/in/aburayhan))*
-🐙 GitHub: https://github.com/aburayhan
-🌐 Portfolio: *([link](https://aburayhan01.github.io/Portfolio/))*
+ Email: *(aburayahanmondal214@gmail.com)*
+ LinkedIn: *([](https://www.linkedin.com/in/aburayhan))*
+ GitHub: https://github.com/aburayhan
+ Portfolio: *([link](https://aburayhan01.github.io/Portfolio/))*
 
 ---
 
-⭐ If you like this portfolio, feel free to **star the repository**.
+ If you like this portfolio, feel free to **star the repository**.

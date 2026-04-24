@@ -18,24 +18,23 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
             <!-- Logo -->
-            <div class="text-2xl font-bold tracking-wide">
-                <span class="text-white">Abu</span>
-                <span class="text-yellow-400">Rayhan</span>
+            <div class="flex items-center h-8"> <img src="assets/logo1.png" alt="Abu Rayhan"
+                    class="max-h-[200%] w-auto object-contain"
+                    onerror="this.style.display='none'; document.getElementById('fallback-text').style.display='flex';">
+
+                <div id="fallback-text" class="hidden items-center text-2xl font-bold tracking-wide">
+                    <span class="text-white">Abu</span>
+                    <span class="text-yellow-400 ml-1">Rayhan</span>
+                </div>
             </div>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest">
-
                 <a href="#home" class="nav-link">Home</a>
-
                 <a href="#about" class="nav-link">About</a>
-
                 <a href="#experience" class="nav-link">Experience</a>
-
                 <a href="#projects" class="nav-link">Projects</a>
-
                 <a href="#contact" class="nav-link">Contact</a>
-
             </div>
 
             <!-- Hire Button -->
@@ -737,7 +736,7 @@
                 </div>
 
                 <!-- Contact Form -->
-                  <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgorrgrn" method="POST">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgorrgrn" method="POST">
                     <h3 class="text-white font-bold text-2xl mb-4">Send a Message</h3>
 
                     <input type="text" name="name" placeholder="Your Name" required>

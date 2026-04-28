@@ -132,3 +132,90 @@ const observer = new IntersectionObserver(entries => {
 cards.forEach(card => {
     observer.observe(card);
 });
+
+// ===== CERTIFICATE SLIDER =====
+(function () {
+  const track = document.getElementById('certTrack');
+  const dotsContainer = document.getElementById('certDots');
+  if (!track) return;
+ 
+  const cards = track.querySelectorAll('.cert-card');
+  const totalCards = cards.length;
+  let current = 0;
+ 
+  // Calculate visible cards based on screen width
+  function getVisible() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
+  }
+ 
+  // Calculate max index
+  function getMax() {
+    return Math.max(0, totalCards - getVisible());
+  }
+ 
+  // Build dots
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const max = getMax();
+    for (let i = 0; i <= max; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('cert-dot');
+      if (i === current) dot.classList.add('active');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+ 
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('.cert-dot');
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+ 
+  function getCardWidth() {
+    const card = cards[0];
+    const gap = 24;
+    return card.offsetWidth + gap;
+  }
+ 
+  function goTo(index) {
+    const max = getMax();
+    current = Math.max(0, Math.min(index, max));
+    track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+    updateDots();
+  }
+ 
+  // Exposed globally for onclick buttons
+  window.slideCert = function (dir) {
+    goTo(current + dir);
+  };
+ 
+  // Auto slide every 3.5s
+  let autoTimer = setInterval(() => {
+    const max = getMax();
+    goTo(current >= max ? 0 : current + 1);
+  }, 2500);
+ 
+  // Pause auto on hover
+  track.closest('.cert-slider-wrapper').addEventListener('mouseenter', () => clearInterval(autoTimer));
+  track.closest('.cert-slider-wrapper').addEventListener('mouseleave', () => {
+    autoTimer = setInterval(() => {
+      const max = getMax();
+      goTo(current >= max ? 0 : current + 1);
+    }, 2500);
+  });
+ 
+  // Touch/swipe support
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) slideCert(diff > 0 ? 1 : -1);
+  });
+ 
+  // Init
+  buildDots();
+  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+})();
+ 

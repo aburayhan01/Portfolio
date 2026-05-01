@@ -678,3 +678,16 @@ box-shadow:
   }
 }
  
+/* ===== ACTIVE NAVBAR ===== */
+.active-nav {
+  color: #22d3ee !important;
+}
+.active-nav::after {
+  width: 100% !important;
+}
+ 
+/* ===== BACK TO TOP HOVER ===== */
+#backToTop:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(34, 211, 238, 0.6);
+}

@@ -218,4 +218,103 @@ cards.forEach(card => {
   buildDots();
   window.addEventListener('resize', () => { buildDots(); goTo(0); });
 })();
+ // ===== STATS COUNTER =====
+(function () {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
  
+  let started = false;
+ 
+  function startCounting() {
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 1500;
+      const step = Math.ceil(target / (duration / 16));
+      let current = 0;
+ 
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        counter.textContent = current;
+      }, 16);
+    });
+  }
+ 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        startCounting();
+      }
+    });
+  }, { threshold: 0.3 });
+ 
+  const statsSection = document.getElementById('stats');
+  if (statsSection) observer.observe(statsSection);
+})();
+ 
+// ===== PAGE LOADER =====
+(function () {
+  const loader = document.getElementById('pageLoader');
+  const loaderBar = document.getElementById('loaderBar');
+  if (!loader) return;
+ 
+  let width = 0;
+  const fill = setInterval(() => {
+    width += 2;
+    if (loaderBar) loaderBar.style.width = width + '%';
+    if (width >= 100) {
+      clearInterval(fill);
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }, 200);
+    }
+  }, 20);
+})();
+ 
+// ===== SCROLL PROGRESS BAR =====
+window.addEventListener('scroll', function () {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  const bar = document.getElementById('scrollBar');
+  if (bar) bar.style.width = progress + '%';
+});
+ 
+// ===== BACK TO TOP BUTTON =====
+window.addEventListener('scroll', function () {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  if (window.scrollY > 400) {
+    btn.style.display = 'flex';
+  } else {
+    btn.style.display = 'none';
+  }
+});
+ 
+// ===== ACTIVE NAVBAR HIGHLIGHT =====
+(function () {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+ 
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+ 
+    navLinks.forEach(link => {
+      link.classList.remove('active-nav');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active-nav');
+      }
+    });
+  });
+})();

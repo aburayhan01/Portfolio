@@ -12,6 +12,44 @@
 
 <body class="bg-[#121212] text-gray-100">
 
+
+
+
+
+    <!-- ===== PAGE LOADER ===== -->
+    <div id="pageLoader" style="
+        position:fixed; inset:0; background:#0b0b0b;
+        display:flex; flex-direction:column;
+        align-items:center; justify-content:center;
+        z-index:9999; transition: opacity 0.5s ease;">
+        <div style="font-size:2rem; font-weight:800; color:#22d3ee; letter-spacing:4px;">ABU RAYHAN</div>
+        <div
+            style="margin-top:20px; width:200px; height:3px; background:#1a1a1a; border-radius:999px; overflow:hidden;">
+            <div id="loaderBar"
+                style="height:100%; width:0%; background:linear-gradient(90deg,#22d3ee,#3b82f6); border-radius:999px; transition:width 0.05s;">
+            </div>
+        </div>
+        <div style="margin-top:10px; color:#6b7280; font-size:13px;">Loading...</div>
+    </div>
+    <!-- ===== END PAGE LOADER ===== -->
+
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
+    <div id="scrollBar" style="
+        position:fixed; top:0; left:0; height:3px; width:0%;
+        background:linear-gradient(90deg,#22d3ee,#3b82f6);
+        z-index:9998; transition:width 0.1s ease;">
+    </div>
+    <!-- ===== END SCROLL PROGRESS BAR ===== -->
+
+
+
+
+
+
+
+
+
+
     <nav id="navbar"
         class="fixed top-0 w-full z-50 bg-[#0b0b0b]/80 backdrop-blur-lg border-b border-gray-800 transition-all">
 
@@ -344,6 +382,67 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== STATS COUNTER SECTION ========== -->
+    <section id="stats" class="py-16 px-6 bg-[#000000]">
+        <div class="container mx-auto max-w-5xl A">
+
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <span class="text-cyan-400 italic text-lg">At a Glance</span>
+                <h2 class="text-4xl font-bold uppercase mt-1">
+                    My <span class="text-cyan-500">Achievements</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- Stat 1 -->
+                <div
+                    class="stats-card text-center p-6 bg-[#151515] border border-[#262626] rounded-2xl hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">
+                        <span class="counter" data-target="2">0</span>
+                    </div>
+                    <div class="text-gray-400 text-sm font-medium">Internships</div>
+                    <div class="text-2xl mt-2">💼</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div
+                    class="stats-card text-center p-6 bg-[#151515] border border-[#262626] rounded-2xl hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">
+                        <span class="counter" data-target="2">0</span>
+                    </div>
+                    <div class="text-gray-400 text-sm font-medium">Projects</div>
+                    <div class="text-2xl mt-2">🚀</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div
+                    class="stats-card text-center p-6 bg-[#151515] border border-[#262626] rounded-2xl hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">
+                        <span class="counter" data-target="8">0</span>
+                    </div>
+                    <div class="text-gray-400 text-sm font-medium">Certificates</div>
+                    <div class="text-2xl mt-2">🏅</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div
+                    class="stats-card text-center p-6 bg-[#151515] border border-[#262626] rounded-2xl hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">
+                        <span class="counter" data-target="80">0</span>+
+                    </div>
+                    <div class="text-gray-400 text-sm font-medium">Problems Solved</div>
+                    <div class="text-2xl mt-2">💡</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ========== END STATS SECTION ========== -->
+
+
 
     <section id="experience" class="py-24 px-6 bg-[#000000]">
 
@@ -682,102 +781,125 @@
     </section>
     <!-- ========== END PROJECTS SECTION ========== -->
 
-  <!-- ========== CERTIFICATES SECTION ========== -->
+    <!-- ========== CERTIFICATES SECTION ========== -->
     <section id="certificates" class="py-20 px-6 bg-[#000000]">
-        <div class="container mx-auto max-w-6xl">
- 
+        <div class="container mx-auto max-w-6xl A">
+
             <!-- Header -->
             <div class="text-center mb-14">
                 <span class="text-cyan-400 italic text-lg">Credentials</span>
                 <h2 class="text-4xl font-bold uppercase mt-1">
                     My <span class="text-cyan-500">Certificates</span>
                 </h2>
-                <p class="text-gray-400 mt-3 max-w-xl mx-auto">Professional certifications and training achievements.</p>
+                <p class="text-gray-400 mt-3 max-w-xl mx-auto">Professional certifications and training achievements.
+                </p>
             </div>
- 
+
             <!-- Slider Wrapper -->
             <div class="cert-slider-wrapper relative">
- 
+
                 <!-- Slider Track -->
                 <div class="cert-slider overflow-hidden">
                     <div class="cert-track flex gap-6 transition-transform duration-500 ease-in-out" id="certTrack">
- 
+
                         <!-- Certificate 1 -->
-                        <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-cyan-900/40 to-blue-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-cyan-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-cyan-900/40 to-blue-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-cyan-800">
                                 🏅
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm leading-snug">Software Development & QA Internship</h4>
+                                <h4 class="text-white font-bold text-sm leading-snug">Software Development & QA
+                                    Internship</h4>
                                 <p class="text-cyan-400 text-xs mt-1">Business Automation</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/13rTdTA26jWb4zV4uN2eejtWCmbOgPAc7/view?usp=sharing" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/13rTdTA26jWb4zV4uN2eejtWCmbOgPAc7/view?usp=sharing"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
- 
+
                         <!-- Certificate 2 -->
-                        <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-green-900/40 to-teal-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-green-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-green-900/40 to-teal-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-green-800">
                                 📡
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm leading-snug">Network Engineering Internship</h4>
+                                <h4 class="text-white font-bold text-sm leading-snug">Network Engineering Internship
+                                </h4>
                                 <p class="text-green-400 text-xs mt-1">BTCL</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1fFb1IY8Yg75hXAdHtuoXGV2mXA_wAYwD/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1fFb1IY8Yg75hXAdHtuoXGV2mXA_wAYwD/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
- 
+
                         <!-- Certificate 3 -->
-                        <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-purple-900/40 to-pink-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-purple-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-purple-900/40 to-pink-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-purple-800">
                                 📱
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm leading-snug">Mobile Game & Application Development</h4>
+                                <h4 class="text-white font-bold text-sm leading-snug">Mobile Game & Application
+                                    Development</h4>
                                 <p class="text-purple-400 text-xs mt-1">ICT Division</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1bUC5o1MBPxBKMOzqrINpjuNilqnYFXBz/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1bUC5o1MBPxBKMOzqrINpjuNilqnYFXBz/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
 
-                         <!-- Certificate 4 -->
-                        <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-cyan-900/40 to-indigo-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-cyan-800">
+                        <!-- Certificate 4 -->
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-cyan-900/40 to-indigo-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-cyan-800">
                                 👑
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm leading-snug">President – Executive Committee</h4>
+                                <h4 class="text-white font-bold text-sm leading-snug">President – Executive Committee
+                                </h4>
                                 <p class="text-cyan-400 text-xs mt-1">Prothom Alo Bondhushava, NSTU Unit</p>
                                 <p class="text-gray-500 text-xs mt-1">Jan 2024 – Dec 2025</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1tIx1Ejsu_LwF86NI9u00KUF8CJ9UL9LC/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1tIx1Ejsu_LwF86NI9u00KUF8CJ9UL9LC/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
- 
+
                         <!-- Certificate 5 -->
-                        <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-blue-900/40 to-sky-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-blue-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-blue-900/40 to-sky-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-blue-800">
                                 📋
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-sm leading-snug">General Secretary – Executive Committee</h4>
+                                <h4 class="text-white font-bold text-sm leading-snug">General Secretary – Executive
+                                    Committee</h4>
                                 <p class="text-blue-400 text-xs mt-1">Prothom Alo Bondhushava, NSTU Unit</p>
                                 <p class="text-gray-500 text-xs mt-1">Jan 2023 – Dec 2023</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1TA2sbZblR-azusz7-CCo7tPR9rtLQ6nM/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1TA2sbZblR-azusz7-CCo7tPR9rtLQ6nM/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
- 
+
                         <!-- Certificate 6 -->
 
-                         <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-orange-900/40 to-amber-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-orange-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-orange-900/40 to-amber-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-orange-800">
                                 🎙️
                             </div>
                             <div>
@@ -785,32 +907,38 @@
                                 <p class="text-orange-400 text-xs mt-1">Prothom Alo Bondhushava</p>
                                 <p class="text-gray-500 text-xs mt-1">01 Mar – 22 Mar 2023</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1xtmEPnyrcc6RgKKyNWkgqDAZ5GquN8fP/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1xtmEPnyrcc6RgKKyNWkgqDAZ5GquN8fP/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
-                       
-                       
- 
+
+
+
                         <!-- Certificate 7 -->
-                          <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-yellow-900/40 to-orange-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-yellow-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-yellow-900/40 to-orange-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-yellow-800">
                                 🌍
                             </div>
                             <div>
                                 <h4 class="text-white font-bold text-sm leading-snug">SDG Program Participation</h4>
                                 <p class="text-yellow-400 text-xs mt-1">UNDP</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1vmtKuPXVjyAF8wcIvBGBYdgXwKCoPFqk/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1vmtKuPXVjyAF8wcIvBGBYdgXwKCoPFqk/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
-                        
- 
+
+
                         <!-- Certificate 8 -->
 
-                        <div class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-                            <div class="cert-icon bg-gradient-to-br from-red-900/40 to-rose-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-red-800">
+                        <div
+                            class="cert-card flex-shrink-0 w-[280px] bg-[#151515] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]">
+                            <div
+                                class="cert-icon bg-gradient-to-br from-red-900/40 to-rose-900/40 w-16 h-16 rounded-full flex items-center justify-center text-3xl border border-red-800">
                                 🩺
                             </div>
                             <div>
@@ -818,33 +946,30 @@
                                 <p class="text-red-400 text-xs mt-1">Bangladesh Red Crescent Society, Noakhali Unit</p>
                                 <p class="text-gray-500 text-xs mt-1">17–18 May 2024</p>
                             </div>
-                            <a href="https://drive.google.com/file/d/1DfXvYphaBghzPe9JkaupX35Uy-ZCKgg5/view?usp=drive_link" target="_blank" class="cert-view-btn">
+                            <a href="https://drive.google.com/file/d/1DfXvYphaBghzPe9JkaupX35Uy-ZCKgg5/view?usp=drive_link"
+                                target="_blank" class="cert-view-btn">
                                 View Certificate
                             </a>
                         </div>
 
-
-
-                       
- 
                     </div>
                 </div>
- 
+
                 <!-- Prev Button -->
                 <button id="certPrev" class="cert-nav-btn left-0 -translate-x-5" onclick="slideCert(-1)">
                     &#8592;
                 </button>
- 
+
                 <!-- Next Button -->
                 <button id="certNext" class="cert-nav-btn right-0 translate-x-5" onclick="slideCert(1)">
                     &#8594;
                 </button>
- 
+
             </div>
- 
+
             <!-- Dots -->
             <div class="flex justify-center gap-2 mt-8" id="certDots"></div>
- 
+
             <!-- Drive Link -->
             <div class="text-center mt-8">
                 <a href="https://drive.google.com/drive/folders/13zv4Tqg78LZasDfyGx4v-DhyX96W6ODO?usp=drive_link"
@@ -853,11 +978,10 @@
                     📁 View All Certificates on Google Drive
                 </a>
             </div>
- 
+
         </div>
     </section>
     <!-- ========== END CERTIFICATES SECTION ========== -->
-
 
     <section id="contact" class="py-20 px-6 bg-[#000000]">
         <div class="container mx-auto max-w-5xl  A ">
@@ -903,7 +1027,7 @@
                         <a href="https://www.linkedin.com/in/rayhan017/" target="_blank" class="social-btn linkedin">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://github.com/aburayhan" target="_blank" class="social-btn github">
+                        <a href="https://github.com/aburayhan01" target="_blank" class="social-btn github">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://www.facebook.com/abu.rayhan.214/" target="_blank" class="social-btn facebook">
@@ -929,6 +1053,25 @@
         </div>
     </section>
     <script src="script.js"></script>
+
+
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="
+        position:fixed; bottom:30px; right:30px;
+        width:45px; height:45px; border-radius:50%;
+        background:linear-gradient(135deg,#22d3ee,#3b82f6);
+        color:#0b0b0b; font-size:20px; font-weight:bold;
+        border:none; cursor:pointer;
+        display:none; align-items:center; justify-content:center;
+        box-shadow:0 4px 15px rgba(34,211,238,0.4);
+        transition:all 0.3s ease; z-index:999;">
+        ↑
+    </button>
+    <!-- ===== END BACK TO TOP ===== -->
+
+
+
+
 </body>
 
 </html>

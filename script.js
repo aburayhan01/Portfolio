@@ -13,7 +13,7 @@ menuBtn.addEventListener("click", () => {
 const roles = [
     "Software QA Engineer",
     "API Tester",
-    "Automation Testing Learner"
+    "Test Automation Engineer",
 ];
 
 let roleIndex = 0;
